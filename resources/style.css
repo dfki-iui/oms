@@ -1,0 +1,271 @@
+/*
+--------------------------------------------------------------------------------
+What:	"Oranges in the sky" Styles(Table data design)
+Who:	Krasimir Makaveev(krasi [at] makaveev [dot] com)
+When:	15.09.2005(created)
+--------------------------------------------------------------------------------
+*/
+
+body {
+    font-family: Roboto, Segoe UI, Verdana, Arial, sans-serif;	
+	margin: 0 auto;
+	color: #444444;
+	max-width:1200px;
+	background: #eee none no-repeat fixed top left;
+	/*background-image: -webkit-gradient(linear, 100% 0%, 100% 100%, from(#dfdfdf), color-stop(25%, #f7f7f7), color-stop(75%, #f7f7f7), to(#dfdfdf));*/
+	/*background-image: -moz-linear-gradient(top, #dfdfdf, #f7f7f7, #f7f7f7, #dfdfdf);*/
+	-webkit-font-smoothing: antialiased;
+}
+
+body a {    
+	/*color:#E0E0E0;*/
+	color:orange;
+}
+
+body a:hover {    
+	/*color:#E0E0E0;*/
+	color:red;
+}
+
+div.topbar {
+	background: black; 
+	color: #ccc;
+	min-height: 36px;
+	font-size: 1.9em;
+}
+
+table {
+	border-collapse: collapse;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;*/
+	color: #333;
+	background: #eee;
+}
+
+table caption {
+	font-size: 1.2em;
+	font-weight: bold;
+	letter-spacing: -1px;
+	margin-bottom: 10px;
+	padding: 5px;
+	text-align: left;
+	background: none;/*#efefef;*/
+	border: none;/*1px solid #888;*/
+	border-bottom: 1px solid #E68A2E;
+	color: #E68A2E;/*#666;*/
+	font-variant: small-caps;
+}
+
+table a {
+	text-decoration: none;
+	border-bottom: 1px dotted #f60;
+	color: #E68A2E;
+	font-weight: bold;
+}
+
+table a:hover {
+	text-decoration: none;
+	color: red;
+	/*background: #f60;*/
+}
+
+table tr th a {
+	color: #222;
+	border-bottom: 1px dotted #369;
+}
+
+table tr th a:hover {
+	color: #fff;
+	background: #369;
+}
+
+table thead tr th {
+	text-transform: uppercase;
+	background: #e2e2e2;
+}
+
+table tfoot tr th, table tfoot tr td {
+	text-transform: uppercase;
+	color: #000;
+	font-weight: bold;
+}
+
+/*table tfoot tr th {
+	width: 20%;
+}
+
+table tfoot tr td {
+	width: 80%;
+}*/
+
+table td, table th {
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 5px;
+	line-height: 1.8em;
+	font-size: 0.9em;
+	vertical-align: top;
+	text-align: left;
+	/*vertical-align:middle;*/
+}
+
+table td.keyvalue, table th.keyvalue {
+	min-width: 150px;
+}
+
+table td.action, table th.action {
+	min-width: 90px;
+}
+
+table th {
+	background: #FFD687;
+}
+
+table.maintable caption {
+	width: 100%;
+}
+
+table.maintable {
+	width: 99%;
+}
+
+table tr.odd {
+	background: #efefef;
+}
+
+table tr.even {
+	background: #f6f6f6;
+}
+
+p.frame, span.frame {
+	background:#efefef; 
+	border-color:#ccc; 
+	border-width:1px; 
+	border-style:solid; 
+	padding:5px; 
+	width:99%;
+	color:black;
+}
+
+span.button {
+	font-weight: regular;
+	color: #222;
+    cursor: pointer; 
+	border-color: #808080;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.3em;
+	background: #E0E0E0;
+	background: -moz-linear-gradient(top, #FEFEFE, #E5E5E5);
+    background: -webkit-gradient(linear, left top, left bottom, from(#FEFEFE), to(#E5E5E5));
+	box-shadow: 1px 1px 1px #000;
+	padding-left: 5px;
+	-moz-transition:all 0.5s ease 0s; /*Firefox*/
+	-webkit-transition:all 0.5s ease 0s; /*Safari + Chrome*/
+	-o-transition:all 0.5s ease 0s; /*Opera*/
+	-ms-transition:all 0.5s ease 0s; /*Internet Explorer*/
+	transition:all 0.5s ease 0s; /*W3C Standard*/
+}
+
+span.button:hover {
+	background: #f60;
+	background: -moz-linear-gradient(top, #ff6f0f, #f06000);
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff6f0f), to(#f06000));
+	color: white;
+}
+
+span.button_minus {
+    font-weight: regular;
+	color: #222;
+    cursor: pointer; 
+	border-color: #bbb;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.2em;
+	background: #E0E0E0 url(images/minus_16.png) no-repeat 0.25em 50%;
+	background: url(images/minus_16.png) no-repeat 0.25em 50%, -moz-linear-gradient(top, #FEFEFE, #E5E5E5);
+    background: url(images/minus_16.png) no-repeat 0.25em 50%, -webkit-gradient(linear, left top, left bottom, from(#FEFEFE), to(#E5E5E5));
+	/*box-shadow: 1px 0.5px 0.5px #222;*/
+	padding-left: 25px;
+	-moz-transition:all 0.5s ease 0s; /*Firefox*/
+	-webkit-transition:all 0.5s ease 0s; /*Safari + Chrome*/
+	-o-transition:all 0.5s ease 0s; /*Opera*/
+	-ms-transition:all 0.5s ease 0s; /*Internet Explorer*/
+	transition:all 0.5s ease 0s; /*W3C Standard*/
+}
+
+span.button_minus:hover {
+    background: #f60 url(images/minus_16.png) no-repeat 0.25em 50%;
+	background: url(images/minus_16.png) no-repeat 0.25em 50%, -moz-linear-gradient(top, #ff9f3f, #f56505);
+    background: url(images/minus_16.png) no-repeat 0.25em 50%, webkit-gradient(linear, left top, left bottom, from(#ff9f3f), to(#f56505));
+	color: white;
+}
+
+span.button_plus {
+	font-weight: regular;
+	color: #222;
+    cursor: pointer; 
+	border-color: #bbb;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.2em;
+	background: #E0E0E0 url(images/plus_16.png) no-repeat 0.25em 50%;
+	background: url(images/plus_16.png) no-repeat 0.25em 50%, -moz-linear-gradient(top, #FEFEFE, #E5E5E5);
+    background: url(images/plus_16.png) no-repeat 0.25em 50%, -webkit-gradient(linear, left top, left bottom, from(#FEFEFE), to(#E5E5E5));
+	/*box-shadow: 1px 0.5px 0.5px #222;*/
+	padding-left: 25px;
+	-moz-transition:all 0.5s ease 0s; /*Firefox*/
+	-webkit-transition:all 0.5s ease 0s; /*Safari + Chrome*/
+	-o-transition:all 0.5s ease 0s; /*Opera*/
+	-ms-transition:all 0.5s ease 0s; /*Internet Explorer*/
+	transition:all 0.5s ease 0s; /*W3C Standard*/
+}
+
+span.button_plus:hover {
+    background: #f60 url(images/plus_16.png) no-repeat 0.25em 50%;
+	background: url(images/plus_16.png) no-repeat 0.25em 50%, -moz-linear-gradient(top, #ff9f3f, #f56505);
+    background: url(images/plus_16.png) no-repeat 0.25em 50%, webkit-gradient(linear, left top, left bottom, from(#ff9f3f), to(#f56505));
+	color: white;
+}
+
+span.button_edit {
+	font-weight: regular;
+	color: #222;
+    cursor: pointer; 
+	border-color: #bbb;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.2em;
+	background: #E0E0E0 url(images/edit_16.png) no-repeat 0.25em 50%;
+	background: url(images/edit_16.png) no-repeat 0.25em 50%, -moz-linear-gradient(top, #FEFEFE, #E5E5E5);
+    background: url(images/edit_16.png) no-repeat 0.25em 50%, -webkit-gradient(linear, left top, left bottom, from(#FEFEFE), to(#E5E5E5));
+	/*box-shadow: 1px 0.5px 0.5px #222;*/
+	padding-left: 25px;
+	-moz-transition:all 0.5s ease 0s; /*Firefox*/
+	-webkit-transition:all 0.5s ease 0s; /*Safari + Chrome*/
+	-o-transition:all 0.5s ease 0s; /*Opera*/
+	-ms-transition:all 0.5s ease 0s; /*Internet Explorer*/
+	transition:all 0.5s ease 0s; /*W3C Standard*/
+}
+
+span.button_edit:hover {
+    background: #f60 url(images/edit_16.png) no-repeat 0.25em 50%;
+	background: url(images/edit_16.png) no-repeat 0.25em 50%, -moz-linear-gradient(top, #ff9f3f, #f56505);
+    background: url(images/edit_16.png) no-repeat 0.25em 50%, webkit-gradient(linear, left top, left bottom, from(#ff9f3f), to(#f56505));
+	color: white;
+}
+
+span.text_plus {
+	color: #888;
+    cursor: pointer; 
+	background: url(images/plus_16.png) no-repeat 0.25em 50%;
+	padding-left: 25px;
+}
+
+span.text_minus {
+	color: #888;
+    cursor: pointer; 
+	background: url(images/minus_16.png) no-repeat 0.25em 50%;
+	padding-left: 25px;
+}

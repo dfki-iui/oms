@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"   
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+    <html xmlns="http://www.w3.org/1999/xhtml">  
+    <head>  
+        <title>Forms with Prototype</title>  
+  
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
+        <meta http-equiv="pragma" content="no-cache" />  
+        <script type="text/javascript" src="js/prototype.js"></script>  
+        <script type="text/javascript">  
+        // <![CDATA[  
+        document.observe('dom:loaded', function() {  
+              
+            function sendForm(event){  
+                // we stop the default submit behaviour  
+                Event.stop(event);  
+                var oOptions = {  
+                    method: "POST",  
+                    parameters: Form.serialize("contactForm"),  
+                    asynchronous: true,  
+                    onFailure: function (oXHR) {  
+                        $('feedback').update(oXHR.statusText);  
+                    },  
+                    onLoading: function (oXHR) {  
+                        $('feedback').update('Sending data ... <img src="images/loading_indicator.gif" title="Loading..." alt="Loading..." border="0" />');  
+                    },                            
+                    onSuccess: function(oXHR) {  
+                       $('feedback').update(oXHR.responseText);  
+                    }                 
+                };  
+                //var oRequest = new Ajax.Updater({success: oOptions.onSuccess.bindAsEventListener(oOptions)}, "", oOptions);             
+            }  
+            Event.observe('submitButton', 'click', sendForm, false);  
+              
+        });   
+        // ]]>  
+        </script>       
+    </head>  
+    <body>  
+        <div id="feedback"> </div>  
+        <div id="contact">  
+            <form id="contactForm">  
+                
+            <table border="0" cellpadding="5" cellspacing="0" bgcolor="#E0E0E0">
+			    <tr>
+			      <td align="right">Subject Type</td>
+			      <td><input name="subject-type" type="text" size="30" maxlength="30"></td>
+			    </tr>
+			    <tr>
+			      <td align="right">Value</td>
+			      <td><input name="value" type="text" size="30" maxlength="40"></td>
+			    </tr>
+			    
+			    <tr>
+			      <td align="right">Formular:</td>
+			      <td>
+			        <input type="submit" id="submitButton" value=" Save ">
+			        <input type="reset" value=" Reset">
+			      </td>
+			    </tr>
+		  </table>
+            </form>  
+        </div>  
+    </body>  
+</html>  

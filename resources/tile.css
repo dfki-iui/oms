@@ -1,0 +1,59 @@
+table.tile {
+	border:0;
+	width:100%; 
+	border-collapse:separate; 
+	border-spacing:10px; 
+	padding:0px;
+	font-weight:regular; 
+	font-size:40px;
+}
+
+table.tile tr {
+	height:160px;
+}
+
+table.tile td {
+	vertical-align: middle; 
+	cursor:pointer; 
+	width:33%; 
+	border:0; 
+	color:white; 
+}
+
+td.tile11 {
+	background:rgb(225,155,25);
+}
+
+td.tile12 {
+	background:rgb(127,33,111);
+}
+
+td.tile13 {
+	background:rgb(104,194,18);
+}
+
+
+td.tile21 {
+	background:rgb(75,174,180);
+}
+
+td.tile22 {
+	background:rgb(216,82,55);
+}
+
+td.tile23 {
+	background:rgb(3,80,150);
+}
+
+
+td.tile31 {
+	background:rgb(91,91,189);
+}
+
+td.tile32 {
+	background:rgb(155,182,53);
+}
+
+td.tile33 {
+	background:rgb(1,190,228);
+}

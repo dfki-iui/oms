@@ -1,0 +1,6 @@
+* All operation functions are located in "actionscripts.js"
+* Javascript and css file of calendar views are located in directory calendar_view. 
+* fileuploader.js and fileuploader.css is responsible for the file upload part on the web interface
+* prototype.js is the ajax library handling/processing ajax requests
+* scriptaculous.js and effects.js is responsible for visual effects on the page (e.g. rolling effects, high lighting)
+ 

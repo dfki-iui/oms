@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<omm:oms xmlns:omm="http://www.w3.org/2005/Incubator/omm/elements/1.0/">
+  <currentVersion>0</currentVersion>
+  <history>
+    <historyEntry version="0">
+      <entity>
+        <omm:contributor omm:type="email">jens.haupert@dfki.de</omm:contributor>
+        <omm:date omm:encoding="ISO8601">2012-03-13T11:00:00+02:00</omm:date>
+      </entity>
+      <change>INITIAL_REVISION</change>
+    </historyEntry>
+  </history>
+   <accessControl>
+    <noRestriction />
+  </accessControl>
+</omm:oms>

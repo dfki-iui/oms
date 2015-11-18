@@ -1,0 +1,16 @@
+de.dfki.adom.client
+de.dfki.adom.rest
+de.dfki.adom.rest.nodes
+de.dfki.adom.security
+de.dfki.adom.ssdp
+de.dfki.adom.test
+de.dfki.oms.adom
+de.dfki.oms.history
+de.dfki.oms.main
+de.dfki.oms.parser
+de.dfki.oms.query
+de.dfki.oms.test
+de.dfki.oms.tools
+de.dfki.oms.webapp
+de.dfki.oms.webapp.handler
+de.dfki.oms.webapp.handler.impl

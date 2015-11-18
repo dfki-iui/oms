@@ -1,0 +1,46 @@
+Mon Feb  6 13:42:25 CET 2012 Haiyang Xu haiyang.xu@dfki.de
+
+OMS Web Interface Request Parameter Specification
+This document gives request example of each operation. 
+Current the map of request urls to their handler is defined in QueryCommandDispatcher.
+We are now implementing it with hard code (if/else clause)
+Maybe in the future we can write it into a "url-to-action-mapping" configuration file
+
+Click on Header
+	-	Expand Header:	  	GET /oms/sample/st?part=header
+	-	Collapse Header:	GET /oms/sample/st?part=empty_header
+
+Edit in Header
+	-	Edit Primary ID:	POST /oms/sample/st?cmd=edit&part=header!entry_Primary%20ID!entry_url!hash_4ba68cb91b1d254e653c6d2e5fb85950e6ef5777b7c6ff2f3bc8f24c3599fde5!odd&value=http%3A%2F%2Fwww.w3.org%2F2005%2FIncubator%2Fomm%2Fsamples%2Fp1
+	-	Edit Additional Blk:POST /oms/sample/st?cmd=edit&part=header!entry_AdditionalBlocks!entry_omm_http!hash_8b15fb6aa3726d71c340c0892c7d9d392ef4126f4e1c5fe2464b1f5cad2eade7!odd&value=http%3A%2F%2Fwww.w3.org%2F2005%2FIncubator%2Fomm%2Fsamples%2Fp1%2Fext
+
+Click on a Block
+	-	Expand a Block:		GET /oms/sample/st?part=block_1
+	-	Collapse a Block:	GET /oms/sample/st?part=empty_block_1
+
+Edit in a Block
+	-	Delete an entire Block:
+		GET /oms/sample/st?cmd=remove&part=block_1!
+	
+	-	Delete a meta function: (caution: Title, Namespace, Creator and Type cannot be deleted)
+		GET /oms/sample/st?cmd=remove&part=block_2!Contributors_2!
+	
+	-	Delete an entry:
+		GET /oms/sample/st?cmd=remove&part=block_1!Title_1!entry_French!hash_670d5c7ef50fe0095d2a330a25aab7e8189ae05c906b4b57d5073d42981dd7c7!
+		GET /oms/sample/st?cmd=remove&part=block_1!Contributors_1!entry_email!hash_7f59aa8201d53b80f42802c83ee2782029957f8455da8ad913443e97b351a5b3!
+		
+	-	Modify an entry:
+		POST /oms/sample/st?cmd=edit&part=block_1!Title_1!entry_English!hash_684da0445de200b912c0abec282b262e1e0f0f8e7df8fef7816e2b6f059622f9!odd&value=sample%20title
+		POST /oms/sample/st?cmd=edit&part=block_1!Contributors_1!entry_email!hash_7f59aa8201d53b80f42802c83ee2782029957f8455da8ad913443e97b351a5b3!odd&entitytype=email&value=user%40dfki.de&time=6%3A12%20AM&date=1%2F31%2F11
+		
+	-	Modify a meta function:
+		POST /oms/sample/st?cmd=edit&part=block_1!Type_1!hash_6100225ee3f24e0be3435f6a7c6c2afd3c7fdb7c465fb99e64ac0a1127c7595a!odd&value=http%3A%2F%2Fpurl.org%2Fdc%2Fdcmitype%2FDataset
+		
+	-	Add an entry:
+		POST /oms/sample/st?cmd=add&part=block_1!Title_1!odd&multilangkey=Belarusian&value=example
+		
+	-	Add a meta function:
+		POST /oms/sample/st?cmd=add&part=block_1!Subject_1!odd&subjecttype=Text&value=haha
+		
+		
+		
